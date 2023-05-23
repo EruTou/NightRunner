@@ -1,33 +1,31 @@
 import pygame
 
-root_path = '/data/data/org.nrunner.nightrunner/files/app/'
-
 clock = pygame.time.Clock()
 
 pygame.init()
 screen = pygame.display.set_mode((618, 359))
 pygame.display.set_caption('Game')
-icon = pygame.image.load(root_path + 'images/icon.png').convert_alpha()
+icon = pygame.image.load('images/icon.png').convert_alpha()
 pygame.display.set_icon(icon)
 
-bg = pygame.image.load(root_path + 'images/bg.png').convert_alpha()
-bg_sound = pygame.mixer.Sound(root_path + 'sounds/bg.mp3')
-player = pygame.image.load(root_path + 'images/player_right/player_right1.png').convert_alpha()
-ghost = pygame.image.load(root_path + 'images/ghost.png').convert_alpha()
-bullet = pygame.image.load(root_path + 'images/bullet.png').convert_alpha()
+bg = pygame.image.load('images/bg.png').convert_alpha()
+bg_sound = pygame.mixer.Sound('sounds/bg.mp3')
+player = pygame.image.load('images/player_right/player_right1.png').convert_alpha()
+ghost = pygame.image.load('images/ghost.png').convert_alpha()
+bullet = pygame.image.load('images/bullet.png').convert_alpha()
 
 walk_right = [
-    pygame.image.load(root_path + 'images/player_right/player_right1.png').convert_alpha(),
-    pygame.image.load(root_path + 'images/player_right/player_right2.png').convert_alpha(),
-    pygame.image.load(root_path + 'images/player_right/player_right3.png').convert_alpha(),
-    pygame.image.load(root_path + 'images/player_right/player_right4.png').convert_alpha()
+    pygame.image.load('images/player_right/player_right1.png').convert_alpha(),
+    pygame.image.load('images/player_right/player_right2.png').convert_alpha(),
+    pygame.image.load('images/player_right/player_right3.png').convert_alpha(),
+    pygame.image.load('images/player_right/player_right4.png').convert_alpha()
 ]
 
 walk_left = [
-    pygame.image.load(root_path + 'images/player_left/player_left1.png').convert_alpha(),
-    pygame.image.load(root_path + 'images/player_left/player_left2.png').convert_alpha(),
-    pygame.image.load(root_path + 'images/player_left/player_left3.png').convert_alpha(),
-    pygame.image.load(root_path + 'images/player_left/player_left4.png').convert_alpha()
+    pygame.image.load('images/player_left/player_left1.png').convert_alpha(),
+    pygame.image.load('images/player_left/player_left2.png').convert_alpha(),
+    pygame.image.load('images/player_left/player_left3.png').convert_alpha(),
+    pygame.image.load('images/player_left/player_left4.png').convert_alpha()
 ]
 
 ghost_list = []
@@ -49,9 +47,9 @@ jump_height = 7
 ghost_timer = pygame.USEREVENT + 1
 pygame.time.set_timer(ghost_timer, 2500)
 
-label_40 = pygame.font.Font(root_path + 'fonts/Roboto-Black.ttf', 40)
-label_24 = pygame.font.Font(root_path + 'fonts/Roboto-Black.ttf', 24)
-label_16 = pygame.font.Font(root_path + 'fonts/Roboto-Black.ttf', 16)
+label_40 = pygame.font.Font('fonts/Roboto-Black.ttf', 40)
+label_24 = pygame.font.Font('fonts/Roboto-Black.ttf', 24)
+label_16 = pygame.font.Font('fonts/Roboto-Black.ttf', 16)
 lose_label = label_40.render('Вы проиграли!', False, (193, 196, 199))
 restart_label = label_24.render('Играть заново', False, (115, 132, 148))
 restart_label_rect = restart_label.get_rect(topleft=(225, 180))
