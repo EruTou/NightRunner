@@ -24,3 +24,10 @@ After that you have to write this to run the game
 ```
 python main.py
 ```
+
+## Gameplay
+
++ **Up arrow** - Jump
++ **Arrow left** - Move left
++ **Arrow right** - Move right
++ **Left Shift** - Fire
